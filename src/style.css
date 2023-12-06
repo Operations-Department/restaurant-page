@@ -1,0 +1,81 @@
+/* css reset */
+*,
+html {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+	--div-color: rgb(67 67 67 / 80%);
+	--border-color: #ffd700a8;
+	--border-radius: 30px;
+}
+
+@font-face {
+	font-family: 'title';
+	src: url(./fonts/title.ttf);
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'tabs';
+	src: url(./fonts/tab.ttf);
+	font-weight: 600;
+	font-style: normal;
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+	display: grid;
+	grid-template-rows: 1fr 3fr;
+	background-image: url(./imgs/milk-splash.jpg);
+	background-size: 100% 100%;
+}
+
+.header {
+	display: grid;
+	grid-template-rows: 2fr 1fr;
+    background: var(--div-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 14px 12px 3px black;
+	font-family: title;
+	font-size: 130px;
+}
+
+.tabs {
+	font-family: tabs;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.tabs > button {
+	background: none;
+	font-size: 40px;
+    color: white;
+	transition: ease-in-out 0.25s;
+	padding: 12px;
+}
+
+.tabs > button:hover {
+	cursor: pointer;
+    transform: translateY(-8px);
+    background: white;
+    color: black;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
