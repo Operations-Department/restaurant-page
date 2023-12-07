@@ -12,7 +12,7 @@ html {
 :root {
 	--div-color: rgb(67 67 67 / 80%);
 	--border-color: #ffd700a8;
-	--border-radius: 30px;
+	--border-radius: 25px;
 }
 
 @font-face {
@@ -30,8 +30,8 @@ html {
 }
 
 .content {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 	display: grid;
 	grid-template-rows: 1fr 3fr;
 	background-image: url(./imgs/milk-splash.jpg);
@@ -50,9 +50,10 @@ html {
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 14px 12px 3px black;
+    text-shadow: 14px 12px 3px #ffd700a8;
 	font-family: title;
-	font-size: 130px;
+	font-size: 160px;
+	padding-top: 40px;
 }
 
 .tabs {
@@ -74,8 +75,41 @@ html {
 .tabs > button:hover {
 	cursor: pointer;
     transform: translateY(-8px);
-    background: white;
-    color: black;
+    background: none;
+    color: gold;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
+}
+
+.body-container {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.body {
+	display: grid;
+	grid-template-rows: 1fr 2fr 1fr;
+    background: var(--div-color);
+	border: 1px solid var(--border-color);
+	height: 85%;
+	min-height: min-content;
+	width: 60%;
+	min-width: min-content;
+	font-family: 'tabs';
+	font-size: 32px;
+	color: white;
+	align-items: center;
+    justify-items: center;
+	text-align: center;
+	padding: 10px;
+}
+
+.body-img-container {
+	background-image: url('./imgs/milk-scoop.jpg');
+	height: 27rem;
+	width: 29rem; 
+	background-size: 100% 100%;
+	border-radius: 250px;
+	border: 1px solid var(--border-color);
 }
