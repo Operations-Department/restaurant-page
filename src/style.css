@@ -113,3 +113,8 @@ html {
 	border-radius: 250px;
 	border: 1px solid var(--border-color);
 }
+
+.selected-tab {
+    border-top: 2px solid white;
+    border-right: 2px solid gray;
+}

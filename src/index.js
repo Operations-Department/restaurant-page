@@ -1,7 +1,7 @@
 import './style.css';
 import homePage from './home.js';
 import menuPage from './menu.js';
-import contanctPage from './contact.js';
+import contactPage from './contact.js';
 
 function component() {
 
@@ -40,27 +40,46 @@ function component() {
     //event listeners - set content between tabs
     document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menuPage());
+        menuTab.classList.add('selected-tab');
     });
 
     homeTab.addEventListener('click', function() {
         const bodyContainer = document.querySelector('.body-container');
+        const allTabs = document.querySelectorAll('button');
 
+        allTabs.forEach(tab => {
+            tab.classList.remove('selected-tab');
+        });
+
+        homeTab.classList.add('selected-tab');
         bodyContainer.remove();
         document.body.appendChild(homePage()); 
     });
 
     menuTab.addEventListener('click', function() {
         const bodyContainer = document.querySelector('.body-container');
+        const allTabs = document.querySelectorAll('button');
 
+        allTabs.forEach(tab => {
+            tab.classList.remove('selected-tab');
+        });
+
+        menuTab.classList.add('selected-tab');
         bodyContainer.remove();
         document.body.appendChild(menuPage());
     });
 
     contactTab.addEventListener('click', function() {
         const bodyContainer = document.querySelector('.body-container');
+        const allTabs = document.querySelectorAll('button');
 
+        allTabs.forEach(tab => {
+            tab.classList.remove('selected-tab');
+        });
+
+        contactTab.classList.add('selected-tab');
         bodyContainer.remove();
-        document.body.appendChild(contanctPage());
+        document.body.appendChild(contactPage());
     });
 
     return content;

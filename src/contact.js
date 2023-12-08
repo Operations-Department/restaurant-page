@@ -1,4 +1,4 @@
-export default function contanctPage() {
+export default function contactPage() {
     
     const content = document.getElementById('content');
     
