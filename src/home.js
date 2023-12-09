@@ -1,3 +1,6 @@
+//import imgs
+import milkScoopImg from './imgs/milk-scoop.jpg';
+
 export default function homePage() {
 
     const content = document.getElementById('content');
@@ -7,13 +10,17 @@ export default function homePage() {
     const body = document.createElement('div');
     const bodyTop = document.createElement('div');
     const bodyMid = document.createElement('div');
-    const imgContainer = document.createElement('div');
     const bodyLow = document.createElement('div');
+
+    //add image + accessibility
+    const milkScoop = new Image();
+    milkScoop.src = milkScoopImg;
+    milkScoop.alt = 'Hands scooping delicious milk';
 
     //add classes
     bodyContainer.classList.add('body-container');
-    body.classList.add('body');
-    imgContainer.classList.add('body-img-container');
+    body.classList.add('body-home');
+    milkScoop.classList.add('body-img-container');
 
     //add inner HTML
     bodyTop.innerHTML = `The best milk hands down! 
@@ -29,7 +36,7 @@ export default function homePage() {
     bodyContainer.appendChild(body);
     body.appendChild(bodyTop);
     body.appendChild(bodyMid);
-    bodyMid.appendChild(imgContainer);
+    bodyMid.appendChild(milkScoop);
     body.appendChild(bodyLow);    
 
     return content;

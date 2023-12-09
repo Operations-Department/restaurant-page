@@ -1,4 +1,7 @@
+//css
 import './style.css';
+
+//modules
 import homePage from './home.js';
 import menuPage from './menu.js';
 import contactPage from './contact.js';
@@ -21,6 +24,9 @@ function component() {
     header.classList.add('header');
     titleContainer.classList.add('title');
     tabContainer.classList.add('tabs');
+    homeTab.classList.add('header-buttons');
+    menuTab.classList.add('header-buttons');
+    contactTab.classList.add('header-buttons');
 
     //set innerHTML
     title.innerHTML = 'Latte a la Lac';
@@ -39,9 +45,9 @@ function component() {
 
     //event listeners - set content between tabs
     document.addEventListener('DOMContentLoaded', function() {
-        document.body.appendChild(menuPage());
-        menuTab.classList.add('selected-tab');
-        menuTab.disabled = true;
+        document.body.appendChild(contactPage());
+        contactTab.classList.add('selected-tab');
+        contactTab.disabled = true;
     });
 
     homeTab.addEventListener('click', function() {

@@ -13,6 +13,7 @@ html {
 	--div-color: rgb(67 67 67 / 80%);
 	--border-color: #ffd900;
 	--border-radius: 25px;
+	--image-border: 250px;
 }
 
 @font-face {
@@ -30,12 +31,13 @@ html {
 }
 
 .content {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr 3fr;
 	background-image: url(./imgs/milk-splash.jpg);
 	background-size: 100% 100%;
+	background-attachment: fixed;
 }
 
 .header {
@@ -61,10 +63,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
-.tabs > button {
+.header-buttons {
 	background: none;
 	font-size: 40px;
     color: white;
@@ -72,13 +74,14 @@ html {
 	padding: 12px;
 }
 
-.tabs > button:hover {
+.header-buttons:hover,
+.header-buttons:focus {
 	cursor: pointer;
     transform: translateY(-8px);
     background: none;
-    color: gold;
+    color: var(--border-color);
     border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+	box-shadow: 1px 1px 0px 0px var(--border-color);
 }
 
 .body-container {
@@ -87,14 +90,15 @@ html {
     justify-content: center;
 }
 
-.body {
+.body-home,
+.body-menu,
+.body-contact {
 	display: grid;
-	grid-template-rows: 1fr 2fr 1fr;
     background: var(--div-color);
 	border: 1px solid var(--border-color);
 	height: 85%;
+	width: 50%;
 	min-height: min-content;
-	width: 60%;
 	min-width: min-content;
 	font-family: 'tabs';
 	font-size: 32px;
@@ -105,15 +109,69 @@ html {
 	padding: 10px;
 }
 
+.body-home {
+	grid-template-rows: 1fr 2fr 1fr;
+}
+
+.body-menu {
+
+}
+
+.body-contact {
+	grid-template-columns: 1fr 2fr;
+}
+
+.contact-left {
+	grid-column: 1 / 2;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns:  1fr 8fr;
+	height: 70%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+	padding: 10px;
+	justify-items: start;
+    align-items: center;
+	column-gap: 10px;
+}
+
+.contact-icons {
+	height: 40px;
+	filter: invert(1);
+}
+
+.contact-right {
+	grid-column: 2 / 3;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	padding: 10px;
+	height: 70%;
+	width: 80%;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+}
+
 .body-img-container {
-	background-image: url('./imgs/milk-scoop.jpg');
-	height: 27rem;
-	width: 29rem; 
-	background-size: 100% 100%;
-	border-radius: 250px;
+	height: 20rem;
+	width: 20rem; 
+	border-radius: var(--image-border);
 	border: 1px solid var(--border-color);
 }
 
 .selected-tab {
     border-top: 2px solid white;
+}
+
+.selected-tab:hover {
+	cursor: default;
+    transform: none;
+    background: none;
+    color: white;
+    border-radius: 0;
+	box-shadow: none;
 }

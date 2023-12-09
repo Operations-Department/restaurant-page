@@ -9,7 +9,7 @@ export default function menuPage() {
 
     //add classes
     bodyContainer.classList.add('body-container');
-    body.classList.add('body');
+    body.classList.add('body-menu');
 
     //add inner HTML
 
