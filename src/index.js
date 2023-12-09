@@ -41,6 +41,7 @@ function component() {
     document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menuPage());
         menuTab.classList.add('selected-tab');
+        menuTab.disabled = true;
     });
 
     homeTab.addEventListener('click', function() {
@@ -49,9 +50,11 @@ function component() {
 
         allTabs.forEach(tab => {
             tab.classList.remove('selected-tab');
+            tab.disabled = false;
         });
 
         homeTab.classList.add('selected-tab');
+        homeTab.disabled = true;
         bodyContainer.remove();
         document.body.appendChild(homePage()); 
     });
@@ -62,9 +65,11 @@ function component() {
 
         allTabs.forEach(tab => {
             tab.classList.remove('selected-tab');
+            tab.disabled = false;
         });
 
         menuTab.classList.add('selected-tab');
+        menuTab.disabled = true;
         bodyContainer.remove();
         document.body.appendChild(menuPage());
     });
@@ -75,9 +80,11 @@ function component() {
 
         allTabs.forEach(tab => {
             tab.classList.remove('selected-tab');
+            tab.disabled = false;
         });
 
         contactTab.classList.add('selected-tab');
+        contactTab.disabled = true;
         bodyContainer.remove();
         document.body.appendChild(contactPage());
     });
