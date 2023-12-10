@@ -46,7 +46,7 @@ html {
     background: var(--div-color);
 	border-bottom: 1px solid var(--border-color);
 	height: 10rem;
-    align-items: end;
+    align-items: center;
     justify-items: center;
 }
 
@@ -99,6 +99,7 @@ html {
 	display: grid;
     background: var(--div-color);
 	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
 	height: 85%;
 	width: 50%;
 	min-height: min-content;
@@ -158,6 +159,16 @@ html {
 iframe {
 	height: 100%;
 	width: 100%;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+	transition: ease-in-out 0.3s;
+	/* padding: 10px; */
+}
+
+iframe:hover {
+	transform: scale(1.05);
+	box-shadow: 20px 20px 40px black;
+
 }
 
 .body-img-container {
@@ -168,14 +179,13 @@ iframe {
 }
 
 .selected-tab {
-    border-top: 2px solid white;
+	color: var(--border-color);
+	border-radius: var(--border-radius);
+	box-shadow: 1px 1px 0px 0px var(--border-color);
 }
 
 .selected-tab:hover {
 	cursor: default;
     transform: none;
     background: none;
-    color: white;
-    border-radius: 0;
-	box-shadow: none;
 }

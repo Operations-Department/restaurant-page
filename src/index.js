@@ -2,7 +2,7 @@
 import './style.css';
 
 //images
-import Milk from './imgs/milking.gif';
+import Milk from './imgs/milk-pale.gif';
 
 //modules
 import homePage from './home.js';
@@ -24,8 +24,8 @@ function component() {
 
 
     const milk = document.createElement('a');
-    milk.href = 'https://www.flaticon.com/free-animated-icons/milking';
-    milk.title = 'Milking animated icons created by Freepik - Flaticon';
+    milk.href = 'https://www.flaticon.com/free-animated-icons/dairy-products';
+    milk.title = 'Dairy products animated icons created by Freepik - Flaticon';
 
     const milkPour = new Image();
     milkPour.src = Milk;
@@ -60,9 +60,9 @@ function component() {
 
     //event listeners - set content between tabs
     document.addEventListener('DOMContentLoaded', function() {
-        document.body.appendChild(contactPage());
-        contactTab.classList.add('selected-tab');
-        contactTab.disabled = true;
+        document.body.appendChild(menuPage());
+        menuTab.classList.add('selected-tab');
+        menuTab.disabled = true;
     });
 
     homeTab.addEventListener('click', function() {
