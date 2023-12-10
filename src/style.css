@@ -41,6 +41,8 @@ html {
 }
 
 .header {
+	min-height: min-content;
+	min-width: min-content;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
     background: var(--div-color);
@@ -55,6 +57,9 @@ html {
 }
 
 .title {
+	min-height: min-content;
+	min-width: min-content;
+	white-space: nowrap;
 	display: flex;
     color: white;
     text-shadow: 14px 12px 3px #ffd700a8;
@@ -64,6 +69,8 @@ html {
 }
 
 .tabs {
+	min-height: min-content;
+	min-width: min-content;
 	font-family: tabs;
     display: flex;
     gap: 50px;
@@ -118,7 +125,7 @@ html {
 }
 
 .body-menu {
-
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 
 .body-contact {
