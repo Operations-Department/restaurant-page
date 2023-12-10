@@ -42,27 +42,30 @@ html {
 
 .header {
 	display: grid;
-	grid-template-rows: 2fr 1fr;
+	grid-template-columns: 1fr 1fr;
     background: var(--div-color);
 	border-bottom: 1px solid var(--border-color);
+	height: 10rem;
+    align-items: end;
+    justify-items: center;
+}
+
+.header-milk {
+	height: 100px;
 }
 
 .title {
 	display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     text-shadow: 14px 12px 3px #ffd700a8;
 	font-family: title;
-	font-size: 160px;
+	font-size: 140px;
 	padding-top: 40px;
 }
 
 .tabs {
 	font-family: tabs;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 50px;
 }
 

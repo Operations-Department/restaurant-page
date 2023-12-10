@@ -1,6 +1,9 @@
 //css
 import './style.css';
 
+//images
+import Milk from './imgs/milking.gif';
+
 //modules
 import homePage from './home.js';
 import menuPage from './menu.js';
@@ -19,6 +22,15 @@ function component() {
     const menuTab = document.createElement('button');
     const contactTab = document.createElement('button');
 
+
+    const milk = document.createElement('a');
+    milk.href = 'https://www.flaticon.com/free-animated-icons/milking';
+    milk.title = 'Milking animated icons created by Freepik - Flaticon';
+
+    const milkPour = new Image();
+    milkPour.src = Milk;
+    milkPour.alt = 'pouring milk header icon';
+
     //assign css
     content.classList.add('content');
     header.classList.add('header');
@@ -27,6 +39,7 @@ function component() {
     homeTab.classList.add('header-buttons');
     menuTab.classList.add('header-buttons');
     contactTab.classList.add('header-buttons');
+    milkPour.classList.add('header-milk');
 
     //set innerHTML
     title.innerHTML = 'Latte a la Lac';
@@ -37,6 +50,8 @@ function component() {
     //append to page
     content.appendChild(header);
     header.appendChild(titleContainer);
+    titleContainer.appendChild(milk);
+    milk.appendChild(milkPour);
     titleContainer.appendChild(title);
     header.appendChild(tabContainer);
     tabContainer.appendChild(homeTab);
