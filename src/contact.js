@@ -1,4 +1,5 @@
 //import imgs
+import LocationPin from './imgs/location-pin.png';
 import Clock from './imgs/clock.png';
 import Phone from './imgs/iphone.png';
 import Email from './imgs/mail.png';
@@ -11,6 +12,7 @@ export default function contactPage() {
     const bodyContainer = document.createElement('div');
     const body = document.createElement('div');
     const locationInfoContainer = document.createElement('div');
+    const address = document.createElement('div');
     const operationHours = document.createElement('div');
     const phoneNumber = document.createElement('div');
     const email = document.createElement('div');
@@ -23,6 +25,10 @@ export default function contactPage() {
 
 
     //add icons
+    const locationIcon = new Image();
+    locationIcon.src = LocationPin;
+    locationIcon.alt = 'location pin + address';
+
     const clockIcon = new Image();
     clockIcon.src = Clock;
     clockIcon.alt = "clock + open hours";
@@ -40,11 +46,13 @@ export default function contactPage() {
     body.classList.add('body-contact');
     locationInfoContainer.classList.add('contact-left');
     mapContainer.classList.add('contact-right');
+    locationIcon.classList.add('contact-icons');
     clockIcon.classList.add('contact-icons');
     phoneIcon.classList.add('contact-icons');
     emailIcon.classList.add('contact-icons');
 
-    //add inner HTML
+    //add inner HTML 
+    address.innerHTML = '113-4 Daljeon road, Gapyeong, Gyeonggi, SK';
     operationHours.innerHTML = 'Mon-Fri: 9pm~2am<br>Sat-Sun: 9pm~6am';
     phoneNumber.innerHTML = '+82 010-MILK-9210';
     email.innerHTML = 'givememilk@milk.com';
@@ -53,6 +61,8 @@ export default function contactPage() {
     content.appendChild(bodyContainer);
     bodyContainer.appendChild(body);
     body.appendChild(locationInfoContainer);
+    locationInfoContainer.appendChild(locationIcon);
+    locationInfoContainer.appendChild(address);
     locationInfoContainer.appendChild(clockIcon);
     locationInfoContainer.appendChild(operationHours);
     locationInfoContainer.appendChild(phoneIcon);

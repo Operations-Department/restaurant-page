@@ -124,16 +124,17 @@ html {
 .contact-left {
 	grid-column: 1 / 2;
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	grid-template-columns:  1fr 8fr;
 	height: 70%;
     width: 100%;
     align-items: center;
     justify-content: center;
 	padding: 10px;
-	justify-items: start;
+	justify-items: center;
     align-items: center;
 	column-gap: 10px;
+	font-size: 25px;
 }
 
 .contact-icons {
