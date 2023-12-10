@@ -1,5 +1,5 @@
 //import imgs
-import LocationPin from './imgs/location-pin.png';
+import LocationPin from './imgs/location.png';
 import Clock from './imgs/clock.png';
 import Phone from './imgs/iphone.png';
 import Email from './imgs/mail.png';
@@ -24,18 +24,34 @@ export default function contactPage() {
     mapView.allowFullscreen = true;
 
 
-    //add icons
+    //add icons + accessibility + credit links
+    const locationLink = document.createElement('a');
+    locationLink.href = 'https://www.flaticon.com/free-icons/location';
+    locationLink.title = 'Location icons created by Freepik - Flaticon';
+    
     const locationIcon = new Image();
     locationIcon.src = LocationPin;
     locationIcon.alt = 'location pin + address';
+    
+    const clockLink = document.createElement('a');
+    clockLink.href = 'https://www.flaticon.com/free-icons/clock';
+    clockLink.title = 'Clock icons created by dmitri13 - Flaticon';
 
     const clockIcon = new Image();
     clockIcon.src = Clock;
     clockIcon.alt = "clock + open hours";
+    
+    const phoneLink = document.createElement('a');
+    phoneLink.href = 'https://www.flaticon.com/free-icons/iphone';
+    phoneLink.title = 'Iphone icons created by deemakdaksina - Flaticon';
 
     const phoneIcon = new Image();
     phoneIcon.src = Phone;
     phoneIcon.alt = 'phone + phone number';
+
+    const emailLink = document.createElement('a');
+    emailLink.href = 'https://www.flaticon.com/free-icons/email';
+    emailLink.title = 'Email icons created by Freepik - Flaticon';
 
     const emailIcon = new Image();
     emailIcon.src = Email;
@@ -61,13 +77,17 @@ export default function contactPage() {
     content.appendChild(bodyContainer);
     bodyContainer.appendChild(body);
     body.appendChild(locationInfoContainer);
-    locationInfoContainer.appendChild(locationIcon);
+    locationInfoContainer.appendChild(locationLink); //here
+    locationLink.appendChild(locationIcon);         //here
     locationInfoContainer.appendChild(address);
-    locationInfoContainer.appendChild(clockIcon);
+    locationInfoContainer.appendChild(clockLink);
+    clockLink.appendChild(clockIcon)
     locationInfoContainer.appendChild(operationHours);
-    locationInfoContainer.appendChild(phoneIcon);
+    locationInfoContainer.appendChild(phoneLink);
+    phoneLink.appendChild(phoneIcon);
     locationInfoContainer.appendChild(phoneNumber);
-    locationInfoContainer.appendChild(emailIcon);
+    locationInfoContainer.appendChild(emailLink);
+    emailLink.appendChild(emailIcon);
     locationInfoContainer.appendChild(email);
     body.appendChild(mapContainer);
     mapContainer.appendChild(mapView);
