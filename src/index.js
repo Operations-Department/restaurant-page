@@ -42,7 +42,7 @@ function component() {
     milkPour.classList.add('header-milk');
 
     //set innerHTML
-    title.innerHTML = 'Latte a la Lac';
+    title.innerHTML = 'Latte a la Leche';
     homeTab.innerHTML = 'Home';
     menuTab.innerHTML = 'Menu';
     contactTab.innerHTML = 'Contact';
