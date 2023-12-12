@@ -1,6 +1,5 @@
 /* css reset */
-*,
-html {
+* {
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -9,12 +8,21 @@ html {
 	vertical-align: baseline;
 }
 
+html {
+	/* height: 100vh; */
+	background-image: url(./imgs/milk-splash.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
 :root {
 	--div-color: rgb(67 67 67 / 80%);
 	--border-color: #ffd900;
 	--border-radius: 25px;
 	--image-border: 250px;
 }
+
+/* custom fonts */
 
 @font-face {
 	font-family: 'title';
@@ -31,57 +39,47 @@ html {
 }
 
 .content {
-    height: 100vh;
-	width: 100%;
+	height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr 3fr;
-	background-image: url(./imgs/milk-splash.jpg);
-	background-size: 100% 100%;
-	background-attachment: fixed;
 }
 
+/* header */
+
 .header {
-	min-height: min-content;
-	min-width: min-content;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
     background: var(--div-color);
 	border-bottom: 1px solid var(--border-color);
 	height: 10rem;
-    align-items: center;
+    align-items: end;
     justify-items: center;
 }
 
 .header-milk {
-	height: 100px;
+	height: 9rem;
 }
 
 .title {
-	min-height: min-content;
-	min-width: min-content;
-	white-space: nowrap;
-	display: flex;
+	height: 100%;
+	width: 100%;
+	font-family: title;
     color: white;
     text-shadow: 14px 12px 3px #ffd700a8;
-	font-family: title;
-	font-size: 140px;
-	padding-top: 40px;
-}
-
-.tabs {
-	min-height: min-content;
-	min-width: min-content;
-	font-family: tabs;
-    display: flex;
-    gap: 50px;
+	font-size: 8.5rem;
+	display: flex;
+	align-items: end;
+	justify-content: flex-start;
+	white-space: nowrap;
 }
 
 .header-buttons {
+	font-family: tabs;
+	color: white;
+	font-size: 2.5rem;
 	background: none;
-	font-size: 40px;
-    color: white;
 	transition: ease-in-out 0.25s;
-	padding: 12px;
+	padding: 1rem;
 }
 
 .header-buttons:hover,
@@ -94,11 +92,19 @@ html {
 	box-shadow: 1px 1px 0px 0px var(--border-color);
 }
 
-.body-container {
-	display: flex;
-	align-items: center;
-    justify-content: center;
+.selected-tab {
+	color: var(--border-color);
+	border-radius: var(--border-radius);
+	box-shadow: 1px 1px 0px 0px var(--border-color);
 }
+
+.selected-tab:hover {
+	cursor: default;
+    transform: none;
+    background: none;
+}
+
+/* all 3 tabs */
 
 .body-home,
 .body-menu,
@@ -107,8 +113,8 @@ html {
     background: var(--div-color);
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
-	height: 85%;
-	width: 50%;
+	height: 90%;
+	width: 55%;
 	min-height: min-content;
 	min-width: min-content;
 	font-family: 'tabs';
@@ -120,9 +126,25 @@ html {
 	padding: 20px;
 }
 
+/* Home */
+
+.body-container {
+	display: flex;
+    justify-content: center;
+}
+
+.body-img-container {
+	height: 20rem;
+	width: 20rem; 
+	border-radius: var(--image-border);
+	border: 1px solid var(--border-color);
+}
+
 .body-home {
 	grid-template-rows: 1fr 2fr 1fr;
 }
+
+/* Menu */
 
 .body-menu {
 	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -147,6 +169,8 @@ html {
     border: 1px solid red;
     border-radius: var(--border-radius);
 }
+
+/* Contact */
 
 .body-contact {
 	grid-template-columns: 1fr 2fr;
@@ -195,24 +219,4 @@ iframe {
 iframe:hover {
 	transform: scale(1.05);
 	box-shadow: 20px 20px 40px black;
-
-}
-
-.body-img-container {
-	height: 20rem;
-	width: 20rem; 
-	border-radius: var(--image-border);
-	border: 1px solid var(--border-color);
-}
-
-.selected-tab {
-	color: var(--border-color);
-	border-radius: var(--border-radius);
-	box-shadow: 1px 1px 0px 0px var(--border-color);
-}
-
-.selected-tab:hover {
-	cursor: default;
-    transform: none;
-    background: none;
 }

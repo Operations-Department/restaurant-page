@@ -14,32 +14,33 @@ function component() {
     const content = document.getElementById('content');
 
     //set header
-    const header = document.createElement('div');
-    const titleContainer = document.createElement('div');
-    const title = document.createElement('div');
-    const tabContainer = document.createElement('div');
-    const homeTab = document.createElement('button');
-    const menuTab = document.createElement('button');
-    const contactTab = document.createElement('button');
+    const header = document.createElement('div');            //header
 
+    const title = document.createElement('div');            //title
+    const homeTab = document.createElement('button');       //append to header
+    const menuTab = document.createElement('button');       //append to header
+    const contactTab = document.createElement('button');    //append to header
 
-    const milk = document.createElement('a');
-    milk.href = 'https://www.flaticon.com/free-animated-icons/dairy-products';
-    milk.title = 'Dairy products animated icons created by Freepik - Flaticon';
+    //add header icon
+    const milkImage = document.createElement('a');
+    milkImage.href = 'https://www.flaticon.com/free-animated-icons/dairy-products';
+    milkImage.title = 'Dairy products animated icons created by Freepik - Flaticon';
 
-    const milkPour = new Image();
-    milkPour.src = Milk;
-    milkPour.alt = 'pouring milk header icon';
+    const milkIcon = new Image();
+    milkIcon.src = Milk;
+    milkIcon.alt = 'milk header icon';
 
     //assign css
     content.classList.add('content');
     header.classList.add('header');
-    titleContainer.classList.add('title');
-    tabContainer.classList.add('tabs');
+
+    title.classList.add('title');
+
     homeTab.classList.add('header-buttons');
     menuTab.classList.add('header-buttons');
     contactTab.classList.add('header-buttons');
-    milkPour.classList.add('header-milk');
+
+    milkIcon.classList.add('header-milk');
 
     //set innerHTML
     title.innerHTML = 'Latte a la Leche';
@@ -49,14 +50,22 @@ function component() {
 
     //append to page
     content.appendChild(header);
-    header.appendChild(titleContainer);
-    titleContainer.appendChild(milk);
-    milk.appendChild(milkPour);
-    titleContainer.appendChild(title);
-    header.appendChild(tabContainer);
-    tabContainer.appendChild(homeTab);
-    tabContainer.appendChild(menuTab);
-    tabContainer.appendChild(contactTab);
+
+    header.appendChild(milkImage);
+    milkImage.appendChild(milkIcon);
+    header.appendChild(title);
+    header.appendChild(homeTab);
+    header.appendChild(menuTab);
+    header.appendChild(contactTab);
+
+
+
+
+
+
+
+
+
 
     //event listeners - set content between tabs
     document.addEventListener('DOMContentLoaded', function() {
