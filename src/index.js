@@ -58,16 +58,7 @@ function component() {
     header.appendChild(menuTab);
     header.appendChild(contactTab);
 
-
-
-
-
-
-
-
-
-
-    //event listeners - set content between tabs
+    //event listeners - call imported modules when clicked
     document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(menuPage());
         menuTab.classList.add('selected-tab');

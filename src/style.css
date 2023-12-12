@@ -66,7 +66,7 @@ html {
 	font-family: title;
     color: white;
     text-shadow: 14px 12px 3px #ffd700a8;
-	font-size: 8.5rem;
+	font-size: 10rem;
 	display: flex;
 	align-items: end;
 	justify-content: flex-start;
@@ -80,6 +80,7 @@ html {
 	background: none;
 	transition: ease-in-out 0.25s;
 	padding: 1rem;
+	justify-self: start;
 }
 
 .header-buttons:hover,
@@ -131,6 +132,7 @@ html {
 .body-container {
 	display: flex;
     justify-content: center;
+	align-items: center;
 }
 
 .body-img-container {
@@ -152,7 +154,7 @@ html {
 
 .menu-item {
 	display: grid;
-	height: 300px;
+	height: 21rem;
 	width: 230px;
     grid-template-rows: 2fr 1fr 1fr;
     justify-items: center;
@@ -160,14 +162,16 @@ html {
 	background: black;
 	border-radius: var(--border-radius);
 	padding: 10px;
+	box-sizing: border-box;
 }
 
 .menu-item > img {
 	grid-row: 1 / 2;
-    height: 100%;
+    height: 15rem;
     width: 100%;
     border: 1px solid red;
     border-radius: var(--border-radius);
+	box-sizing: border-box;
 }
 
 /* Contact */
