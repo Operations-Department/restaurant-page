@@ -114,17 +114,19 @@ html {
     background: var(--div-color);
 	border: 1px solid var(--border-color);
 	border-radius: var(--border-radius);
-	height: 90%;
+	/* height: 90%; */
 	width: 55%;
-	min-height: min-content;
-	min-width: min-content;
+	/* min-height: min-content;
+	min-width: min-content; */
 	font-family: 'tabs';
-	font-size: 32px;
+	font-size: 2rem;
 	color: white;
 	align-items: center;
     justify-items: center;
 	text-align: center;
-	padding: 20px;
+	padding: 1rem;
+	margin-top: 3rem;
+    grid-gap: 1rem;
 }
 
 /* Home */
@@ -132,7 +134,7 @@ html {
 .body-container {
 	display: flex;
     justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 }
 
 .body-img-container {
@@ -149,19 +151,20 @@ html {
 /* Menu */
 
 .body-menu {
-	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .menu-item {
 	display: grid;
 	height: 21rem;
-	width: 230px;
+	width: 14rem;
     grid-template-rows: 2fr 1fr 1fr;
     justify-items: center;
     align-items: center;
 	background: black;
 	border-radius: var(--border-radius);
-	padding: 10px;
+	border: 1px solid var(--border-color);
+	padding: 1rem;
 	box-sizing: border-box;
 }
 
@@ -169,7 +172,7 @@ html {
 	grid-row: 1 / 2;
     height: 15rem;
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid white;
     border-radius: var(--border-radius);
 	box-sizing: border-box;
 }
