@@ -18,8 +18,8 @@ html {
 :root {
 	--div-color: rgb(67 67 67 / 80%);
 	--border-color: #ffd900;
-	--border-radius: 25px;
-	--image-border: 250px;
+	--border-radius: 2rem;
+	--image-border: 10rem;
 }
 
 /* custom fonts */
@@ -50,7 +50,7 @@ html {
 	display: grid;
 	grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
     background: var(--div-color);
-	border-bottom: 1px solid var(--border-color);
+	border-bottom: 0.1rem solid var(--border-color);
 	height: 10rem;
     align-items: end;
     justify-items: center;
@@ -65,7 +65,7 @@ html {
 	width: 100%;
 	font-family: title;
     color: white;
-    text-shadow: 14px 12px 3px #ffd700a8;
+    text-shadow: 1rem 1rem 0.2rem #ffd700a8;
 	font-size: 10rem;
 	display: flex;
 	align-items: end;
@@ -86,17 +86,17 @@ html {
 .header-buttons:hover,
 .header-buttons:focus {
 	cursor: pointer;
-    transform: translateY(-8px);
+    transform: translateY(-1rem);
     background: none;
     color: var(--border-color);
     border-radius: var(--border-radius);
-	box-shadow: 1px 1px 0px 0px var(--border-color);
+	box-shadow: 0.1rem 0.1rem 0 0 var(--border-color);
 }
 
 .selected-tab {
 	color: var(--border-color);
 	border-radius: var(--border-radius);
-	box-shadow: 1px 1px 0px 0px var(--border-color);
+	box-shadow: 0.1rem 0.1rem 0 0 var(--border-color);
 }
 
 .selected-tab:hover {
@@ -112,12 +112,9 @@ html {
 .body-contact {
 	display: grid;
     background: var(--div-color);
-	border: 1px solid var(--border-color);
+	border: 0.1rem solid var(--border-color);
 	border-radius: var(--border-radius);
-	/* height: 90%; */
 	width: 55%;
-	/* min-height: min-content;
-	min-width: min-content; */
 	font-family: 'tabs';
 	font-size: 2rem;
 	color: white;
@@ -141,7 +138,7 @@ html {
 	height: 20rem;
 	width: 20rem; 
 	border-radius: var(--image-border);
-	border: 1px solid var(--border-color);
+	border: 0.1rem solid var(--border-color);
 }
 
 .body-home {
@@ -163,7 +160,7 @@ html {
     align-items: center;
 	background: black;
 	border-radius: var(--border-radius);
-	border: 1px solid var(--border-color);
+	border: 0.1rem solid var(--border-color);
 	padding: 1rem;
 	box-sizing: border-box;
 }
@@ -172,7 +169,7 @@ html {
 	grid-row: 1 / 2;
     height: 15rem;
     width: 100%;
-    border: 1px solid white;
+    border: 0.1rem solid white;
     border-radius: var(--border-radius);
 	box-sizing: border-box;
 }
@@ -180,7 +177,9 @@ html {
 /* Contact */
 
 .body-contact {
-	grid-template-columns: 1fr 2fr;
+	/* grid-template-columns: 1fr 2fr; */
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
 }
 
 .contact-left {
@@ -192,15 +191,15 @@ html {
     width: 100%;
     align-items: center;
     justify-content: center;
-	padding: 10px;
+	padding: 1rem;
 	justify-items: center;
     align-items: center;
-	column-gap: 10px;
-	font-size: 25px;
+	column-gap: 1rem;
+	font-size: 1.5rem;
 }
 
 .contact-icons {
-	height: 40px;
+	height: 2.5rem;
 	filter: invert(1);
 }
 
@@ -209,7 +208,7 @@ html {
 	display: flex;
 	align-items: center;
     justify-content: center;
-	padding: 10px;
+	padding: 1rem;
 	height: 70%;
 	width: 80%;
 }
@@ -218,12 +217,11 @@ iframe {
 	height: 100%;
 	width: 100%;
 	border-radius: var(--border-radius);
-	border: 1px solid var(--border-color);
+	border: 0.1rem solid var(--border-color);
 	transition: ease-in-out 0.3s;
-	/* padding: 10px; */
 }
 
 iframe:hover {
 	transform: scale(1.05);
-	box-shadow: 20px 20px 40px black;
+	box-shadow: 1.5rem 1.5rem 3rem black;
 }

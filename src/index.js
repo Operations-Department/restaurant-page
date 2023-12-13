@@ -60,9 +60,9 @@ function component() {
 
     //event listeners - call imported modules when clicked
     document.addEventListener('DOMContentLoaded', function() {
-        document.body.appendChild(menuPage());
-        menuTab.classList.add('selected-tab');
-        menuTab.disabled = true;
+        document.body.appendChild(homePage());
+        homeTab.classList.add('selected-tab');
+        homeTab.disabled = true;
     });
 
     homeTab.addEventListener('click', function() {
